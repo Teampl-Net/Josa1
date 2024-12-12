@@ -48,7 +48,7 @@
     "typescript": "^5.3.2"
   },
   "description": "josa1 project",
-  "main": "main.ts",
+  "main": "@/main.ts",
   "repository": "https://github.com/Teampl-Net/Josa1.git",
   "license": "MIT"
 }

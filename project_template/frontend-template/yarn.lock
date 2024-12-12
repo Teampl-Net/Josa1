@@ -2781,7 +2781,7 @@ joi@^17.4.0:
 
 "josa1@git+https://github.com/Teampl-Net/Josa1.git":
   version "0.0.0"
-  resolved "git+https://github.com/Teampl-Net/Josa1.git#58c1b44250a6188ea654c852b1e1a870d2d51c53"
+  resolved "git+https://github.com/Teampl-Net/Josa1.git#30b90401954098d9e77e1bd2bb0f0c78bf80357c"
 
 js-message@1.0.7:
   version "1.0.7"

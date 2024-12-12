@@ -1,5 +1,30 @@
 {
-  "extends": "@teampl-net/tsconfig-custom/tsconfig.vue.json",
-  "include": ["src"],
-  "references": [{ "path": "tsconfig.node.json" }]
+  "compilerOptions": {
+    "target": "esnext",                              
+    "module": "esnext",                              
+    "moduleResolution": "node",                      
+    "strict": true,                                  
+    "esModuleInterop": true,                        
+    "skipLibCheck": true,                           
+    "resolveJsonModule": true,                      
+    "baseUrl": "./",                                
+    "paths": {
+      "@/*": ["src/*"]                             
+    },
+    "jsx": "preserve",                             
+    "declaration": true,                            
+    "declarationMap": true,                         
+    "sourceMap": true                              
+  },
+  "include": [
+    "src/**/*.ts",                                  
+    "src/**/*.d.ts",                                
+    "src/**/*.tsx",                                 
+    "src/**/*.vue"                                  
+, "src/main.ㅓs", "src/main.js"  ],
+  "exclude": [
+    "node_modules",                                
+    "dist",                                        
+    "public"                                       
+  ]
 }
