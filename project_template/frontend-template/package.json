@@ -1,0 +1,57 @@
+{
+  "name": "frontend-template",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "yarn g:clean",
+    "start": "yarn g:app-start",
+    "preview": "yarn g:app-preview",
+    "build": "yarn g:build",
+    "build:watch": "yarn g:build-watch",
+    "lint": "yarn g:lint",
+    "fix": "yarn g:fix",
+    "check": "yarn g:app-check",
+    "test": "yarn g:test",
+    "test:watch": "yarn g:test-watch",
+    "coverage": "yarn g:coverage"
+  },
+  "prettier": "@teampl-net/prettier-config-custom",
+  "eslintConfig": {
+    "extends": [
+      "@teampl-net/eslint-config-vue"
+    ],
+    "parserOptions": {
+      "project": [
+        "tsconfig.json",
+        "tsconfig.node.json"
+      ]
+    }
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "dist/"
+  ],
+  "dependencies": {
+    "@vueuse/core": "^10.5.0",
+    "josa1": "git+https://github.com/Teampl-Net/Josa1.git",
+    "pinia": "^2.1.7",
+    "radix-vue": "^1.1.1",
+    "vue": "^3.3.8",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@teampl-net/eslint-config-vue": "workspace:^",
+    "@teampl-net/prettier-config-custom": "workspace:^",
+    "@teampl-net/tsconfig-custom": "workspace:^",
+    "@teampl-net/vite-config-custom": "workspace:^",
+    "@types/node": "^18.18.5",
+    "@vitejs/plugin-vue": "^4.4.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.2",
+    "typescript": "^5.3.2"
+  },
+  "description": "josa1 project",
+  "main": "index.js",
+  "repository": "https://github.com/Teampl-Net/Josa1.git",
+  "license": "MIT"
+}

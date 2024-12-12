@@ -1,0 +1,82 @@
+[tool.poetry]
+name = "chatbot-server"
+version = "0.0.0"
+description = ""
+authors = ["alstjr7375 <alstjr7375@daum.net>"]
+readme = "README.md"
+package-mode = false
+
+# https://medium.com/hootsuite-engineering/hot-reloading-on-a-dockerized-flask-app-4e87b88ea303#86a6
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+python-dotenv = "^1.0.1"
+openai = "^1.10.0"
+langchain = "^0.1.4"
+langchain-openai = "^0.1.3"
+langchain-postgres = "^0.0.3"
+langserve = {extras = ["all"], version = "^0.1.0"}
+pyautogen = "^0.2.8"
+pydantic = "^2.7.0"
+fastapi = "^0.110.0"
+partialjson = "^0.0.7"
+gunicorn = "^22.0.0"
+uvicorn = {extras = ["standard"], version = "^0.29.0"}
+requests = "^2.31.0"
+psycopg = {extras = ["binary"], version = "^3.1.18"}
+orjson = "^3.10.1"
+sqlmodel = "^0.0.18"
+
+[tool.poetry.group.dev.dependencies]
+pyright = "^1.1.338"
+ruff = "^0.3.7"
+
+[tool.pyright]
+# https://microsoft.github.io/pyright/#/configuration?id=sample-pyprojecttoml-file
+include = ["src"]
+exclude = [
+  "**/node_modules",
+  "**/__pycache__",
+  "**.venv"
+]
+defineConstant = { DEBUG = true }
+
+reportMissingImports = true
+reportMissingTypeStubs = false
+strictListInference = true
+strictDictionaryInference = true
+strictSetInference = true
+
+pythonVersion = "3.11"
+
+# https://docs.astral.sh/ruff/tutorial/#getting-started
+[tool.ruff]
+# Set the maximum line length to 100
+line-length = 100
+indent-width = 2
+
+[tool.ruff.lint]
+# Add the `line-too-long` rule to the enforced rule set. By default, Ruff omits rules that
+# overlap with the use of a formatter, like Black, but we can override this behavior by
+# explicitly adding the rule.
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+extend-select = ["E501"]
+
+[tool.ruff.format]
+skip-magic-trailing-comma = true
+
+[build-system]
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"
