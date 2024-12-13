@@ -1,23 +1,53 @@
 <template>
-  <div id="#app">
-    <h1>{{ message }}</h1>
-    <router-link to="/">HOME</router-link> |  <!-- "welcome" 페이지로 이동 -->
-    <router-link to="/welcome">안녕하슈</router-link> |  <!-- "welcome" 페이지로 이동 -->
-    <router-view></router-view>  
+  <div id="#app" class="app-container">
+    <div class="main-content">
+      <SideBar class="sidebar" />
+      <div class="content-area">
+        <Header />
+        <JosaTargeList />
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import Header from './components/Header.vue';
+import JosaTargeList from './components/josaTargeList.vue';
+import SideBar from './components/sideBar.vue';
 
 // Composition API 사용
-const message = ref('Welcome to Vue 3 + Vite');
+const message = ref('조사데이터 관리시스템');
 </script>
 
 <style scoped>
-#app {
+#app{
+  padding: 0;
+
+}
+
+.app-container {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+}
+
+.main-content {
+  display: flex;
+  height: 100vh;
+  left: 0;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #f0f0f0;
+  border-right: 1px solid #ddd;
+}
+
+.content-area {
+  flex-grow: 1;
+  padding: 20px;
+  overflow: auto;
 }
 </style>

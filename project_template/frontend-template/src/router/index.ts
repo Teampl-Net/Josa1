@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import HellowWorld from '../components/HelloWorld.vue';
+import josaTargetList from '../components/josaTargeList.vue';
 
 const routes = [
   {
@@ -12,6 +13,12 @@ const routes = [
     path: '/welcome',
     name: 'welcome',
     component: HellowWorld
+  }
+  ,
+  {
+    path: '/josaTargetList',
+    name: 'josaTargetList',
+    component: josaTargetList
   }
 ];
 
