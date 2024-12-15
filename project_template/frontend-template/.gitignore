@@ -140,3 +140,29 @@ dist
 *.sln
 *.sw?
 *.pem
+
+
+# macOS specific
+.DS_Store
+
+# Temporary files and logs
+*.tmp
+*.temp
+*.log
+*.bak
+
+# 특정 IDE/Editor 관련 파일 추가 (필요에 따라)
+# JetBrains IDE (IntelliJ, PyCharm, WebStorm 등)
+.idea/
+*.iml
+
+# Vim swap files
+*.swp
+*.swo
+
+# Windows Thumbs.db
+Thumbs.db
+
+# Local development SSL
+*.crt
+*.key
