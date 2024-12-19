@@ -1,7 +1,7 @@
 <template>
   <div id="#app" class="app-container">
     <div class="main-content">
-      <SideBar class="sidebar" />
+      <SideBar2 class="sidebar" />
       <div class="content-area">
         <Header />
         <JosaTargeList />
@@ -15,6 +15,7 @@ import { ref } from 'vue';
 import Header from './components/Header.vue';
 import JosaTargeList from './components/josaTargeList.vue';
 import SideBar from './components/sideBar.vue';
+import SideBar2 from './components/sideBar2.vue';
 
 // Composition API 사용
 const message = ref('조사데이터 관리시스템');
@@ -40,7 +41,7 @@ const message = ref('조사데이터 관리시스템');
 }
 
 .sidebar {
-  width: 20%;
+  width: 30%;
   background-color: #f0f0f0;
   border-right: 1px solid #ddd;
 }
